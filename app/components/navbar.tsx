@@ -27,16 +27,24 @@ export default function Navbar() {
             </button>
             <div className={`${isOpen ? 'block' : 'hidden'} top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto flex justify-end items-center z-[999999] absolute right-0`} id="navigation">
                 <div className="x=[99999] bg--white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 relative">
-                <ul className="bottom-0">
-                    <li>
-                        {isOpen && (
-                            <Link href="/calcbc" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white bottom-0">
-                                AP Calculus BC
-                            </Link>
-                        )}
-                    </li>
-                </ul>
-            </div>
+                    <ul className="bottom-0">
+                        <li>
+                            {isOpen && (
+                                <>
+                                    <Link href="/calcbc" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white bottom-0">
+                                        AP Calculus BC
+                                    </Link>
+                                    <Link href="/enm" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white bottom-0">
+                                        AP Physics C Electricity and Magnetism
+                                    </Link>
+                                    <Link href="/enm" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white bottom-0">
+                                        AP Physics C Mechanics
+                                    </Link>
+                                </>
+                            )}
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     )

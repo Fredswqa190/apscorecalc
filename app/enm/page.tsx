@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 
 export default function Page() {
-    const [values, setValues] = useState(Array(6).fill(0)); 
+    const [values, setValues] = useState(Array(3).fill(0)); 
     const [largeValue, setLargeValue] = useState(0); 
     const [total, setTotal] = useState(0);
     const [APScore, setAPScore] = useState(0);
@@ -18,7 +18,7 @@ export default function Page() {
 
     const handleLargeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setLargeValue(Number(event.target.value));
-        const newMCQ = Number(event.target.value) * 1.2;
+        const newMCQ = Number(event.target.value) * 1.2857;
         setMCQ(newMCQ);
     };
 
@@ -27,16 +27,16 @@ export default function Page() {
     }, [values, largeValue, MCQ]);
 
     useEffect(() => {
-        if (total >= 68) {
+        if (total >= 46) {
             setAPScore(5);
         }
-        else if (total<68 && total >= 56){
+        else if (total<46 && total >= 35){
             setAPScore(4);
         }
-        else if (total<56 && total >= 42){
+        else if (total<34 && total >= 30){
             setAPScore(3);
         }
-        else if (total<42 && total >= 35){
+        else if (total<30 && total >= 21){
             setAPScore(2);
         }
         else{
@@ -49,8 +49,8 @@ export default function Page() {
             <Head>
                 <title>Number Selectors</title>
             </Head>
-            <h1 style={{fontSize: '36px'}} className="">AP Calculus BC score calculator</h1>
-            <p style={{fontSize: '20'}} className="">Based on the 2012 curve (which has seemingly persisted)</p>
+            <h1 style={{fontSize: '36px'}} className="">AP Physics C Electricity and Magnetism score calculator</h1>
+            <p style={{fontSize: '20'}} className="">Based on the 2019 curve</p>
             <div style={{ display: 'flex', alignItems: 'center' }}>
                 <p style={{ marginRight: '10px' }}>MCQ Score:</p>
                 <select 
@@ -58,7 +58,7 @@ export default function Page() {
                     onChange={handleLargeChange}
                     style={{ borderRadius: '10px', padding: '5px', marginBottom: '10px', color: 'black' }}
                 >
-                    {Array.from({ length: 46 }, (_, i) => i).map((num) => (
+                    {Array.from({ length: 36 }, (_, i) => i).map((num) => (
                         <option className="text-black items-center" key={num} value={num}>
                             {num}
                         </option>
@@ -73,7 +73,7 @@ export default function Page() {
                         onChange={handleChange(index)}
                         style={{ borderRadius: '10px', padding: '5px', marginBottom: '10px', color: 'black' }}
                     >
-                        {Array.from({ length: 10 }, (_, i) => i).map((num) => (
+                        {Array.from({ length: 16 }, (_, i) => i).map((num) => (
                             <option className="text-black items-center" key={num} value={num}>
                                 {num}
                             </option>
