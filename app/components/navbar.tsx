@@ -34,6 +34,9 @@ export default function Navbar() {
                                     <Link href="/calcbc" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white bottom-0">
                                         AP Calculus BC
                                     </Link>
+					<Link href=>                                    <Link href="/bio" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white bottom-0">
+                                        AP Biology
+                                    </Link>
                                     <Link href="/enm" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white bottom-0">
                                         AP Physics C Electricity and Magnetism
                                     </Link>

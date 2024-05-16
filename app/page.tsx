@@ -37,6 +37,11 @@ export default function Home() {
                   AP Calculus BC
                 </button>
               </Link>
+		<Link href="/bio">
+                <button className="text-black i>
+                  AP Biology
+                </button>
+              </Link>
               <Link href="/enm">
                 <button className="text-black items-center">
                   AP Physics C Electricity and Magnetism
